@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Photo Object Removal</title>
+    <link rel="stylesheet" href="CSS/Object.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        <h1>AI Photo Object Removal</h1>
+        <p>
+            Want to remove an object in your photo?
+            Just upload the image, and our AI will handle the rest!
+        </p>
+        <form id="uploadForm">
+            <label class="file-upload" for="imageFile">
+                Drag and drop file here or click to upload <br>
+                (Limit 10MB per file • PNG, JPG, JPEG)
+            </label>
+            <input type="file" id="imageFile" accept=".png, .jpg, .jpeg">
+            <br><br>
+            <label for="knownWidth">Known Width of Largest Object (in cm or inch): </label>
+            <input type="number" id="knownWidth" name="knownWidth" step="0.01" required><br><br>
+            <label for="unit">Choose Unit:</label>
+            <select id="unit" name="unit">
+                <option value="cm">Centimeters (cm)</option>
+                <option value="inch">Inches (inch)</option>
+            </select><br><br>
+            <button type="submit" class="upload-btn">Upload and Process</button>
+        </form>
+        <div class="loading-icon" id="loadingIcon"></div>
+        <div class="image-container">
+            <img id="processedImage" src="" alt="Processed Image">
+        </div>
+        <button class="download-btn" id="downloadBtn">Download Image</button>
+    </div>
+    <script src="JavaScripts/Object.js"></script>
+</body>
+
+</html>

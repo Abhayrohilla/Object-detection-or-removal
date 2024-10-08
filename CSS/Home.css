@@ -1,0 +1,178 @@
+/* <style> */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #b4f8c8 0%, #a0e4e5 100%);
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #333;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 50px;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 25px;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Image Stack */
+.image-stack {
+    position: relative;
+    max-width: 640px;
+    height: auto;
+}
+
+.image-stack img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.image-stack img:hover {
+    transform: scale(1.05);
+}
+
+.image-stack img:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.image-stack img:nth-child(3) {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .text-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .image-stack img:nth-child(2),
+    .image-stack img:nth-child(3) {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .image-stack img:nth-child(2),
+    .image-stack img:nth-child(3) {
+        top: 5px;
+        left: 5px;
+    }
+}
+/* </style> */
